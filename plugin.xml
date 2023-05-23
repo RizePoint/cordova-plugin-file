@@ -262,14 +262,7 @@ to config.xml in order for the application to find previously stored files.
 
     <!-- electron -->
     <platform name="electron">
-        <hook type="after_plugin_install" src="scripts/electron/addNodeIntegration.js" />
-
-        <js-module src="src/electron/FileProxy.js" name="FileProxy">
-            <runs />
-        </js-module>
-
-        <js-module src="src/electron/rimraf.js" name="rimraf" />
-
+        <framework src="src/electron" />
         <js-module src="www/fileSystemPaths.js" name="fileSystemPaths">
             <merges target="cordova" />
             <runs />
